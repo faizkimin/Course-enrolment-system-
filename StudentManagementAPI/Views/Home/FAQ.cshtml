@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4f2s2Xl0UqK3dBmUaqfi9T2SfAw3n8H/jOG4Cx1/twR25GMAk5P6fhTfQ1w5VJ3fjB2ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .faq-container {
+            max-width: 90%;
+            width: 100%;
+            margin: 20px auto;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #343a40;
+            font-size: 1.8rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .faq-item {
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .faq-question {
+            padding: 10px 15px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background-color: #0056b3;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            color: #343a40;
+            border-top: 1px solid #e1e1e1;
+        }
+
+        .faq-question .icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question .icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .faq-answer ol li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .faq-answer ol li i {
+            color: #007bff;
+            margin-right: 8px;
+        }
+
+        .btn-outline-dark {
+            display: inline-block;
+            text-align: center;
+            padding: 10px 20px;
+            margin: 10px auto;
+            font-size: 1rem;
+            text-decoration: none;
+            border: 1px solid #343a40;
+            border-radius: 5px;
+            color: #343a40;
+            transition: 0.3s;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .faq-question {
+                font-size: 0.9rem;
+            }
+
+            .faq-answer {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is the type of payment do I need to pay?
+                    <i class="fas fa-chevron-down icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <ol>
+                        <li>Tuition fees &#10148; One month before final semester examination starts.</li>
+                        <li>Accommodation fees &#10148; Before the end of the month.</li>
+                        <li>Other fees &#10148; Before registration of the new semester.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is the method of payment?
+                    <i class="fas fa-chevron-down icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Online payment through FPX – <a href="https://epay.kptm.edu.my" target="_blank">https://epay.kptm.edu.my</a>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Am I eligible for sponsorship, do I need to pay the entire fee first?
+                    <i class="fas fa-chevron-down icon"></i>
+                </div>
+                <div class="faq-answer">
+                    No, you just need to pay accommodation and other fees in fullpayment or you can pay with installment .
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    If I am not eligible for MARA sponsorship due to academic requirements. Do I have to pay all fees billed for Semester 1?
+                    <i class="fas fa-chevron-down icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes, you need to pay full for 1 semester. You are encouraged to apply for PTPTN or you can apply your parent's EPF withdrawal can be made to pay for tuition fees.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I pay my tuition fees in instalments?
+                    <i class="fas fa-chevron-down icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes you can pay and We MAY consider your partial payments. You need to complete all the documentation and obtain verification from your Mentor before application can be approved by upper officer.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="/" class="btn-outline-dark">Back</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach(item => {
+                const question = item.querySelector(".faq-question");
+
+                question.addEventListener("click", () => {
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove("active");
+                        }
+                    });
+
+                    item.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

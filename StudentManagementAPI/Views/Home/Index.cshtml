@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Welcome to Course Enrollment Management System";
+}
+
+<!-- Welcome Section -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center py-5">
+                    <h1 class="card-title display-4 text-primary fw-bold">Welcome to UPTM</h1>
+                    <p class="card-text fs-5 mt-3">
+                        Couse Management System
+                    </p>
+                    
+                    <a href="@Url.Action("AboutUs", "Home")" class="btn btn-primary btn-lg mt-4">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container my-5">
+    <div class="row g-4">
+        <!-- Manage Students -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card text-center shadow-lg border-0 h-100">
+                <div class="card-body py-5">
+                    <div class="icon-container mb-3">
+                        <i class="fas fa-users fa-4x text-primary"></i>
+                    </div>
+                    <h4 class="card-title mb-3">Manage Students</h4>
+                    <p class="card-text">Easily add, edit, or remove student records.</p>
+                    <a href="@Url.Action("Index", "Students")" class="btn btn-primary btn-lg">
+                        Manage Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Manage Courses -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card text-center shadow-lg border-0 h-100">
+                <div class="card-body py-5">
+                    <div class="icon-container mb-3">
+                        <i class="fas fa-book-open fa-4x text-success"></i>
+                    </div>
+                    <h4 class="card-title mb-3">Manage Courses</h4>
+                    <p class="card-text">Add, edit, or delete course information seamlessly.</p>
+                    <a href="@Url.Action("Index", "Courses")" class="btn btn-success btn-lg">
+                        Manage Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- View Reports -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card text-center shadow-lg border-0 h-100">
+                <div class="card-body py-5">
+                    <div class="icon-container mb-3">
+                        <i class="fas fa-chart-bar fa-4x text-danger"></i>
+                    </div>
+                    <h4 class="card-title mb-3">View Reports</h4>
+                    <p class="card-text">Gain insights about all course available.</p>
+                    <a href="@Url.Action("ViewPage", "Home")" class="btn btn-danger btn-lg">
+                        View Insights
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>

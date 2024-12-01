@@ -1,0 +1,49 @@
+﻿@model StudentManagementAPI.Models.Student
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4 text-primary">Add New Student</h2>
+            <h4 class="text-center mb-3">Please provide the student's details below:</h4>
+
+            <div class="p-4 border rounded shadow-sm bg-light">
+                <form asp-action="Create" method="post">
+                    <div class="form-group mb-3">
+                        <label asp-for="StudentNo" class="control-label"><strong>Student Number:</strong></label>
+                        <input asp-for="StudentNo" class="form-control" placeholder="Enter Student Number" />
+                        <span asp-validation-for="StudentNo" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="StudentName" class="control-label"><strong>Student Name:</strong></label>
+                        <input asp-for="StudentName" class="form-control" placeholder="Enter Student Name" />
+                        <span asp-validation-for="StudentName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="StudentEmail" class="control-label"><strong>Email Address:</strong></label>
+                        <input asp-for="StudentEmail" class="form-control" placeholder="Enter Email Address" />
+                        <span asp-validation-for="StudentEmail" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="StudentContactNumber" class="control-label"><strong>Contact Number:</strong></label>
+                        <input asp-for="StudentContactNumber" class="form-control" placeholder="Enter Contact Number" />
+                        <span asp-validation-for="StudentContactNumber" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="StudentEnrollmentDate" class="control-label"><strong>Enrollment Date:</strong></label>
+                        <input asp-for="StudentEnrollmentDate" class="form-control" placeholder="Enter Enrollment Date" />
+                        <span asp-validation-for="StudentEnrollmentDate" class="text-danger"></span>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-success px-4">Create</button>
+                        <a asp-action="Index" class="btn btn-secondary px-4 ms-3">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

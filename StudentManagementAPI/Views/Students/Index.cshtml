@@ -1,0 +1,57 @@
+﻿@model IEnumerable<StudentManagementAPI.Models.Student>
+
+<div class="container">
+    <div class="text-center mb-4">
+        <h2>Students List</h2>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <!-- Increased column size for a wider table -->
+            <table class="table table-bordered table-hover table-light">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Student No</th>
+                        <th>Student Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Enrolment Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model)
+                    {
+                        <tr>
+                            <td>@student.StudentNo</td>
+                            <td>@student.StudentName</td>
+                            <td>@student.StudentEmail</td>
+                            <td>@student.StudentContactNumber</td>
+                            <td>@student.StudentEnrollmentDate.ToShortDateString()</td>
+                            <td>
+                                <a class="btn btn-warning btn-sm me-2" asp-action="Edit" asp-route-id="@student.StudentID">Edit</a>
+                                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@student.StudentID">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <!-- Add New Student Button -->
+            <div class="text-center mt-4">
+                <a class="btn btn-success" asp-action="Create">Add New Student</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS to increase table size -->
+<style>
+    .table {
+        font-size: 1.1rem; /* Increase font size */
+    }
+    .table td, .table th {
+        padding: 12px; /* Increase cell padding for a larger table */
+    }
+</style>
